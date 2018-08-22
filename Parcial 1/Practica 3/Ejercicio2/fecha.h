@@ -7,7 +7,7 @@ class Fecha{
  int mes;
  int anio;
  public:
- Fecha(int=3,int=4,int=2018);
+ Fecha(int=3,int=4,int=2014);
  void inicializarFecha(int,int,int);
  void muestraFecha();
  int convierte();

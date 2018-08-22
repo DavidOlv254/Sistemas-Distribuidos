@@ -2,31 +2,31 @@
 #include <iostream>
 using namespace std;
 
-fecha::fecha(int dd,int mm, int aaaa){
+Fecha::Fecha(int dd,int mm, int aaaa){
  mes=mm;
  dia=dd;
  anio=aaaa;
 }
 
-void fecha::inicializarFecha(int dd,int mm, int aaaa){
+void Fecha::inicializarFecha(int dd,int mm, int aaaa){
  anio=aaaa;
  mes=mm;
  dia=dd;
  return;
 }
 
-void fecha::muestraFecha(){
+void Fecha::muestraFecha(){
  cout << "la fecha es(dia-mes-año): " << dia << "-" << mes << "-" << anio << endl;
  return;
 }
 
-int fecha::convierte(){
+int Fecha::convierte(){
  //int numero=
  return anio*10000+mes*100+dia;
  //return numero;
 }
 
-bool fecha::leapyr(){
+bool Fecha::leapyr(){
  if(anio%4==2){
   return true;
  }
@@ -34,7 +34,7 @@ bool fecha::leapyr(){
 }
 
 int main(){
- fecha a,b,c(21,9,1973);
+ Fecha a,b,c(21,9,1973);
  b.inicializarFecha(17,6,2002);
  a.muestraFecha();
  b.muestraFecha();

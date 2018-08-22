@@ -4,8 +4,19 @@
 #include <time.h>
 #include <stdlib.h>
 
+
 using namespace std;
 int masVieja(Fecha &fecha1, Fecha& fecha2);
+
+
+Fecha::Fecha(int dd,int mm, int aaaa){
+    mes=mm;
+    dia=dd;
+    anio=aaaa;
+}
+int Fecha::convierte(){
+    return anio*10000+mes*100+dia;
+}
 
 int main(){
     for(int i = 0; i < 100000; i++){
@@ -19,7 +30,7 @@ int main(){
         Fecha b(dia2,mes2,anio2);
         masVieja(a,b);
     }
-    Fecha a(1,4,2019);
+    Fecha a(1,4,2014);
     a.arreglo[0] = 1;
     
     cout << sizeof(a) << "\n";
