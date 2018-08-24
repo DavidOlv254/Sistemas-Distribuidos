@@ -37,6 +37,8 @@ int main(){
     cout << sizeof(&a) << "\n";
 }
 
+int masVieja(Fecha fecha1, Fecha fecha2);
+
 int masVieja(Fecha &fecha1, Fecha& fecha2){
     if(fecha1.convierte() > fecha2.convierte())
         return 1;
@@ -45,3 +47,5 @@ int masVieja(Fecha &fecha1, Fecha& fecha2){
     else
         return -1;
 }
+
+
