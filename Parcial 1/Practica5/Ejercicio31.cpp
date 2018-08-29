@@ -1,4 +1,6 @@
-#include <iostream> 
+//reserve
+#include <iostream>
+#include <time.h>
 #include <vector>
 using namespace std; 
 
@@ -17,20 +19,37 @@ class PoligonoIrreg
 {
  private:
 	vector<Coordenada> v;
+	static int numVert;
  public:
+ 	static int obtieneNumVert();
  	PoligonoIrreg();
  	void imprimeVertices();
  	void anadeVertice(Coordenada);
+ 	void anadeVertice2(Coordenada);
 };
 
 int main(){
-	PoligonoIrreg pi;
-	pi.anadeVertice(Coordenada(2,3));
-	pi.anadeVertice(Coordenada(3,2));
-	pi.anadeVertice(Coordenada(5,9));
-	pi.anadeVertice(Coordenada(9,5));
-	pi.anadeVertice(Coordenada(3,7));
-	pi.imprimeVertices();
+    int n = 1000 + rand() % 15;
+	int m;
+	cout << n << " Poligonos" << endl;
+	
+	vector<PoligonoIrreg> v;
+	v.reserve(n);
+
+    for(int i=0; i<v.capacity(); i++){
+		PoligonoIrreg pi;
+		m  = 15 + rand() % 30;
+		for(int j=0; j<m; j++){
+			pi.anadeVertice(Coordenada((1+rand()%10),(1+rand()%10)));
+		}
+		v.push_back(pi);
+	}
+
+	/*for(int l=0; l<v.size(); l++){
+		cout << "***Poligono " << l+1 << "***" << endl;
+		v[l].imprimeVertices();
+	}
+*/
 	return 0;
 }
 
@@ -50,6 +69,8 @@ double Coordenada::obtenerY()
 PoligonoIrreg::PoligonoIrreg()
 { }
 
+int PoligonoIrreg::numVert = 0;
+
 void PoligonoIrreg::imprimeVertices()
 {
 	for(int i=0; i< v.size(); i++)
@@ -59,5 +80,12 @@ void PoligonoIrreg::imprimeVertices()
 void PoligonoIrreg::anadeVertice(Coordenada c)
 {
 	v.push_back(c);
-	cout << "Capacidad: " << v.capacity() << endl;
+	numVert++;
 }
+
+void PoligonoIrreg::anadeVertice2(Coordenada c)
+{
+	v.push_back(c);
+	numVert++;
+}
+

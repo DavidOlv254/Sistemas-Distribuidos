@@ -1,28 +1,16 @@
-
-#include <iostream>
-#include <math.h>
 #include "Coordenada.h"
-
+#include <iostream>
 using namespace std;
 
-Coordenada::Coordenada(double xx, double yy)
-{
-	x = xx;
-	y = yy;
-	magnitud = sqrt(pow(x, 2) + pow(y, 2));
-}
+Coordenada::Coordenada(double xx, double yy) : x(xx), y(yy) 
+ { }
 
-double Coordenada::obtenerX()
+ double Coordenada::obtenerX()
 {
-	return x;
+ return x;
 }
 
 double Coordenada::obtenerY()
 {
-	return y;
-}
-
-double Coordenada::getMagnitud()
-{
-	return magnitud;
+ return y;
 }

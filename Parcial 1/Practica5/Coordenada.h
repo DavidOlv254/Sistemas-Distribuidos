@@ -1,16 +1,15 @@
+#ifndef COORDENADA_H_
+#define COORDENADA_H_
 
-#include <iostream>
-using namespace std;
-
-class Coordenada
+class Coordenada 
 {
-	private:
-		double x;
-		double y;
-		double magnitud;
-	public:
-		Coordenada(double x, double y);
-		double obtenerX();
-		double obtenerY();
-		double getMagnitud();
+ private:
+ double x;
+ double y;
+ public:
+   Coordenada(double = 0, double = 0);
+    double obtenerX();
+    double obtenerY();
 };
+
+#endif
