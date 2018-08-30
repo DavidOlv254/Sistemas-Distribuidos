@@ -36,7 +36,7 @@ int main(){
 	cout << n << " Poligonos" << endl;
     
     vector<PoligonoIrreg> v;
-    v.pushback(n);
+    //v.pushback(n);
     /*vector<PoligonoIrreg> v;
 	v.reserve(n);*/
 
