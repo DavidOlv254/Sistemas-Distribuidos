@@ -31,17 +31,15 @@ int main()
 
 		Coordenada a(x,y);
 		PoligonoIrreg p1(x1);
-		p[i]=p1;
-		PoligonoIrreg p1(x1);
 		p1.addVertice(a);
 		p.push_back(p1);//*/
 	}
 
 	cout << "tamaño del vector: "<<p.size()<<endl;
 	cout<<"valor de n: "<<n<<endl;
-/*	for(int i=0;i<n;i++){
+for(int i=0;i<n;i++){
 		p[i].imprimeVertices();
-	}*/
+	}//*/
 
 	return 0;
 }
