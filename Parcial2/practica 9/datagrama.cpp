@@ -50,9 +50,9 @@ void PaqueteDatagrama::inicializaPuerto(int p){
 }
 
 void PaqueteDatagrama::inicializaIp(char *dir){
- memcpy(ip,&dir);
+ memcpy(ip,&dir,4);
 }
 
 void PaqueteDatagrama::inicializaDatos(char *data){
- memcpy(datos,&data);
+ memcpy(datos,&data,strlen(datos));
 }
